@@ -433,3 +433,7 @@ footer .bot{border-top:1px solid #34373C;padding-top:22px;display:flex;justify-c
   .stats .stat+.stat{border-top:1px solid #43474D}
   .stats .stat b{font-size:30px}
 }
+
+/* ---------- project gallery: crop portrait photos to a tidy 4:3 (lightbox still shows the full frame) ---------- */
+.gal.crop .gi{aspect-ratio:4/3}
+.gal.crop .gi img{width:100%;height:100%;object-fit:cover}
