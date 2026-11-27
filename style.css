@@ -438,19 +438,23 @@ footer .bot{border-top:1px solid #34373C;padding-top:22px;display:flex;justify-c
 .gal.crop .gi{aspect-ratio:4/3}
 .gal.crop .gi img{width:100%;height:100%;object-fit:cover}
 
-/* ---------- trust bar and brand cards ---------- */
-.brands{padding:44px 0;border-bottom:1px solid var(--line)}
+/* ---------- trust bar and brand cards: logos tinted in Pitagor colours ---------- */
+.brands{background:var(--light);border-top:3px solid var(--red);padding:40px 0}
 .brands .kicker{text-align:center;margin-bottom:26px}
-.brow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px 44px}
-.wm{display:block;width:auto;height:28px}
-.wm.tesla{height:20px}.wm.zara{height:40px}.wm.inditex{height:24px}.wm.loreal{height:24px}.wm.seur{height:24px}
-.brow .wm{filter:grayscale(1);opacity:.55;transition:filter .2s,opacity .2s}
-.brow .wm:hover{filter:none;opacity:1}
+.brow{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:30px 44px}
+.lg{display:block;width:auto;background:var(--muted);-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-position:center;mask-position:center;-webkit-mask-size:contain;mask-size:contain;transition:background .2s}
+.brow .lg:hover{background:var(--red)}
+.lg.tesla{-webkit-mask-image:url(img/brands/tesla.svg);mask-image:url(img/brands/tesla.svg);aspect-ratio:.773;height:58px}
+.lg.zara{-webkit-mask-image:url(img/brands/zara.svg);mask-image:url(img/brands/zara.svg);aspect-ratio:2.377;height:40px}
+.lg.inditex{-webkit-mask-image:url(img/brands/inditex.svg);mask-image:url(img/brands/inditex.svg);aspect-ratio:4.84;height:24px}
+.lg.loreal{-webkit-mask-image:url(img/brands/loreal.svg);mask-image:url(img/brands/loreal.svg);aspect-ratio:3.56;height:34px}
+.lg.seur{-webkit-mask-image:url(img/brands/seur.svg);mask-image:url(img/brands/seur.svg);aspect-ratio:6.96;height:24px}
 .bgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:36px}
-.bcard{background:#fff;border-top:3px solid var(--red);padding:28px 22px;min-height:190px}
-.bcard .wm{margin-bottom:24px;max-width:100%}
+.bcard{background:#fff;border-top:3px solid var(--red);padding:28px 22px;min-height:200px}
+.bcard .lg{background:var(--ink);margin-bottom:22px;max-width:100%}
 .bcard .bsec{font-weight:500}
 .bcard .bnote{color:var(--muted);font-size:15px;margin-top:6px}
 @media (max-width:1000px){.bgrid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:640px){.brow{justify-content:center}.bgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.bgrid{grid-template-columns:1fr}}
+.bmore{text-align:center;margin-top:26px;color:var(--muted);font-size:16px}
