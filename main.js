@@ -168,3 +168,19 @@ if(form){
   });
 }
 })();
+
+/* projects page: filter project cards by system and country */
+(function(){
+  var s=document.getElementById('fSys'), c=document.getElementById('fCty');
+  if(!s||!c) return;
+  var cards=[].slice.call(document.querySelectorAll('.pj-card')), empty=document.querySelector('.pj-empty');
+  function run(){
+    var n=0;
+    cards.forEach(function(k){
+      var ok=(s.value==='all'||k.getAttribute('data-sys')===s.value)&&(c.value==='all'||k.getAttribute('data-cty')===c.value);
+      k.hidden=!ok; if(ok){n++; k.classList.add('in');}
+    });
+    if(empty) empty.hidden=n>0;
+  }
+  s.addEventListener('change',run); c.addEventListener('change',run);
+})();
