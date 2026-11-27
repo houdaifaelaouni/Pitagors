@@ -75,7 +75,7 @@ if(track){
   if(box){
     var im=box.querySelector('img'), cap=box.querySelector('.pvlb-cap'), idx=0;
     var show=function(i){ idx=(i+shots.length)%shots.length; var s=shots[idx], g=s.querySelector('img');
-      im.src=g.getAttribute('src'); im.alt=g.alt; cap.textContent=(idx+1)+' / '+shots.length+'  ·  '+s.querySelector('figcaption').textContent; };
+      im.src=g.getAttribute('src'); im.alt=g.alt; cap.textContent=(idx+1)+' / '+shots.length+'  ·  '+s.querySelector('figcaption span').textContent; };
     var close=function(){ box.classList.remove('open'); document.body.style.overflow=''; };
     shots.forEach(function(s,i){ s.addEventListener('click',function(){ show(i); box.classList.add('open'); document.body.style.overflow='hidden'; }); });
     box.querySelector('.x').addEventListener('click',close);
