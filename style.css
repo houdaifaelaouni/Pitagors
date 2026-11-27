@@ -458,3 +458,7 @@ footer .bot{border-top:1px solid #34373C;padding-top:22px;display:flex;justify-c
 @media (max-width:640px){.brow{justify-content:center}.bgrid{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.bgrid{grid-template-columns:1fr}}
 .bmore{text-align:center;margin-top:26px;color:var(--muted);font-size:16px}
+
+/* ---------- crew photo: keep the installers in frame when cropped ---------- */
+img[src$="rack-crew.webp"]{object-position:50% 78%}
+.phead[style*="rack-crew"]{background-position:center 72%}
